@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ALL ABOUT FALLOUTBART</title>
+        <meta charset="utf-10">
+        <meta name="description" content="Description of my web page.">
+        <style>
+            p.pos_fixed
+            {
+                position: fixed;
+                top:30px;
+                right:5px;
+            }
+            h3
+            {
+	            position:absolute;
+	            left:700px;
+                top:150px;
+                text-align: center;
+                text-shadow: 5px 5px 5px #AAAAAA;
+                color:beige;
+                font-size: 20pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            h2.pos_right
+            {
+	            position:relative;
+	            left:680px;
+            }
+            h1
+            {
+                text-align: center;
+                text-shadow: 5px 5px 5px #AAAAAA;
+                color:darkslategray;
+                font-size: 12pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            div.ex
+            {
+                background-color:khaki;
+                width:200px;
+                padding: 10px;
+                border:5px goldenrod;
+                margin: 0px;
+            }
+            body
+            {
+                background-color:azure;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>FalloutBart</h3><img src="images/image1.png" alt="my Logo">
+        </header>
+        <section>
+            <div class="ex">Nice to Meet you</div>
+            <h1>All about FalloutBart</h1>
+            <h1>illustrator, animator and gamer</h1>
+            <h1>Strengths:2D animation, character design and hard-core games</h1>
+            <h1>sucks on 3D</h1>
+            <h1>Favourite animation:Mulan, Evangelion, Sword of the Stranger, Grasshopper...etc</h1>
+            <h1>Favourite game:Bloodborne, Darksouls, Sekiro...etc</h1>
+            <h1>Like hot and sour food</h1>
+            <p class="pos_fixed">Welcome to my webpage!</p>
+        </section>
+     <footer>
+        <style>
+        img {
+                display:table-cell;
+                vertical-align: middle;
+                border-radius: 8px;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        </style>    
+              <h2 class="pos_right" id="para1">My twitter:</h3> 
+        <a  href="https://twitter.com/FallOutBart"><img src="images/imges2.jpg" alt="My twitter Logo">
+     </footer>
+    </body>
+</html>
