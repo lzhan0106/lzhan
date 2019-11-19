@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>ALL ABOUT FALLOUTBART</title>
+        <title>Deadly Tracking</title>
         <meta charset="utf-10">
         <meta name="description" content="Description of my web page.">
         <style>
@@ -52,19 +52,40 @@
     </head>
     <body>
         <header>
-            <h3>FalloutBart</h3><img src="images/image1.png" alt="my Logo">
+            <h3>Deadly Tracking</h3><img src="images/image1.png" alt="my Logo">
         </header>
         <section>
-            <div class="ex">Nice to Meet you</div>
-            <h1>All about FalloutBart</h1>
-            <h1>illustrator, animator and gamer</h1>
-            <h1>Strengths:2D animation, character design and hard-core games</h1>
-            <h1>sucks on 3D</h1>
-            <h1>Favourite animation:Mulan, Evangelion, Sword of the Stranger, Grasshopper...etc</h1>
-            <h1>Favourite game:Bloodborne, Darksouls, Sekiro...etc</h1>
-            <h1>Like hot and sour food</h1>
-            <p class="pos_fixed">Welcome to my webpage!</p>
-        </section>
+            <butten>Characters and Color Script</butten>
+	    
+	    <div class="ex">The story of Horror</div>
+            <h1>produced by Lini and Junna</h>
+	    <h1>It is a story about a detactive and a women</h1>
+	    <h1>But it also is a story about god and men...</h1>
+	    
+	    <div class="full-img">
+            <img class="displayed-img" src="images/pic1.jpg">
+            <div class="overlay"></div>
+            </div>
+
+            <div class="thumb-bar">
+
+            </div>
+	    
+	    function displayImage(e) {
+            displayedImage.setAttribute('src', e.target.getAttribute('src'));
+	    }
+
+            for(var i = 1; i <= 5; i++) {
+            var newImage = document.createElement('img');
+            newImage.setAttribute('src', 'images/pic' + i + '.jpg');
+            thumbBar.appendChild(newImage);
+            newImage.addEventListener('click', displayImage)
+	    }
+	    
+	    <video>
+	    
+            </section>
+     
      <footer>
         <style>
         img {
@@ -75,7 +96,7 @@
                 max-height: 100%;
             }
         </style>    
-              <h2 class="pos_right" id="para1">My twitter:</h3> 
+              <h2 class="pos_right" id="para1">Lini's twitter:</h3> 
         <a  href="https://twitter.com/FallOutBart"><img src="images/imges2.jpg" alt="My twitter Logo">
      </footer>
     </body>
