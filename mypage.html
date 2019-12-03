@@ -13,9 +13,6 @@
             }
             h3
             {
-	            position:absolute;
-	            left:700px;
-                top:150px;
                 text-align: center;
                 text-shadow: 5px 5px 5px #AAAAAA;
                 color:beige;
@@ -48,6 +45,24 @@
             {
                 background-color:azure;
             }
+
+            .arrows {
+                position: relative;
+                width: 100vw;
+            }
+
+            .arrow {
+                font-size: 20px;
+                position: absolute;
+            }
+
+            .next {
+                right: 5%;
+            }
+
+            .prev {
+                left: 2%;
+            }
         </style>
     </head>
     <body>
@@ -65,22 +80,43 @@
 	    <div class="full-img">
             <img class="displayed-img" src="images/pic1.jpg">
             <div class="overlay"></div>
-            </div>
+        </div>
 
-            <div class="thumb-bar">
+        <div class="arrows">
+            <div class="arrow next">></div>
+            <div class="arrow prev"><</div>
+        </div>
 
-            </div>
-	    
-	    function displayImage(e) {
-            displayedImage.setAttribute('src', e.target.getAttribute('src'));
-	    }
+        <div class="thumb-bar"></div>
 
-            for(var i = 1; i <= 5; i++) {
-            var newImage = document.createElement('img');
-            newImage.setAttribute('src', 'images/pic' + i + '.jpg');
-            thumbBar.appendChild(newImage);
-            newImage.addEventListener('click', displayImage)
-	    }
+        <video src="LINI-NAME-HERE.mp4" controls>
+                Your browser does not support the video tag.
+        </video>
+    <script>
+    const displayedImage = document.querySelector('.display-img');
+    let count;
+
+    function displayImage(e) {
+        displayedImage.setAttribute('src', e.target.getAttribute('src'));
+    }
+
+    for(var i = 1; i <= 5; i++) {
+        var newImage = document.createElement('img');
+        newImage.setAttribute('src', 'images/pic' + i + '.jpg');
+        thumbBar.appendChild(newImage);
+        newImage.addEventListener('click', displayImage);
+    }
+
+    function nextImage(e) {
+        displayedImage.setAttribute('src', 'images/pic' + count + '.jpg');
+        count++;
+        console.log(count);
+
+    }
+
+    const next = document.querySelector('.next');
+    next.addEventListener('click', nextImage);
+    </script>
 	    
 	    <video>
 	    
