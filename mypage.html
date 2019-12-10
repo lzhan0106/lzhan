@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Deadly Tracking</title>
+        <title>Thought the Gate of Madness</title>
         <meta charset="utf-10">
         <meta name="description" content="Description of my web page.">
         <style>
@@ -20,22 +20,17 @@
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
 
-            h2.pos_right
-            {
-	            position:relative;
-	            left:680px;
-            }
             h1
             {
                 text-align: center;
                 text-shadow: 5px 5px 5px #AAAAAA;
-                color:darkslategray;
+                color:lightyellow;
                 font-size: 12pt;
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
             div.ex
             {
-                background-color:khaki;
+                background-color:lightslategray;
                 width:200px;
                 padding: 10px;
                 border:5px goldenrod;
@@ -43,7 +38,7 @@
             }
             body
             {
-                background-color:azure;
+                background-color: lightslategray;
             }
 
             .arrows {
@@ -63,67 +58,7 @@
             .prev {
                 left: 2%;
             }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h3>Deadly Tracking</h3><img src="images/image1.png" alt="my Logo">
-        </header>
-        <section>
-            <button>Characters and Color Script</button>
-	    
-	    <div class="ex">The story of Horror</div>
-            <h1>produced by Lini and Junna</h>
-	    <h1>It is a story about a detactive and a women</h1>
-	    <h1>But it also is a story about god and men...</h1>
-	    
-	    <div class="full-img">
-            <img class="displayed-img" src="images/pic1.jpg">
-            <div class="overlay"></div>
-        </div>
 
-        <div class="arrows">
-            <div class="arrow next">></div>
-            <div class="arrow prev"><</div>
-        </div>
-
-        <div class="thumb-bar"></div>
-
-        <video src="LINI-NAME-HERE.mp4" controls>
-                Your browser does not support the video tag.
-        </video>
-    <script>
-    const displayedImage = document.querySelector('.display-img');
-    let count;
-
-    function displayImage(e) {
-        displayedImage.setAttribute('src', e.target.getAttribute('src'));
-    }
-
-    for(var i = 1; i <= 5; i++) {
-        var newImage = document.createElement('img');
-        newImage.setAttribute('src', 'images/pic' + i + '.jpg');
-        thumbBar.appendChild(newImage);
-        newImage.addEventListener('click', displayImage);
-    }
-
-    function nextImage(e) {
-        displayedImage.setAttribute('src', 'images/pic' + count + '.jpg');
-        count++;
-        console.log(count);
-
-    }
-
-    const next = document.querySelector('.next');
-    next.addEventListener('click', nextImage);
-    </script>
-	    
-	    <video>
-	    
-            </section>
-     
-     <footer>
-        <style>
         img {
                 display:table-cell;
                 vertical-align: middle;
@@ -131,9 +66,66 @@
                 max-width: 100%;
                 max-height: 100%;
             }
-        </style>    
-              <h2 class="pos_right" id="para1">Lini's twitter:</h3> 
-        <a  href="https://twitter.com/FallOutBart"><img src="images/imges2.jpg" alt="My twitter Logo">
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>Though the Gate of Madness</h3>
+            <h1>Characters and Color Script</h1>
+       	    
+	    <div class="full-img">
+            <img class="displayed-img" src="images/image1.png">
+            <div class="overlay"></div>
+         </div>
+        </header>
+        <section>
+
+	    
+	    <h3>The story of Horror</h3>
+            <h1>produced by Lini and Junna</h1>
+	    <h1>It is a story about a detactive and a women</h1>
+	    <h1>But it also is a story about god and men...</h1>
+
+        <div class="arrows">
+            <div class="arrow next">></div>
+            <div class="arrow prev"><</div>
+        </div>
+        <h1>Animatic</h1>
+
+	    <video width="1280"height="720"controls="controls">
+        <source src="video1.ogg" type="video/ogg">
+            <source src="video1.mp4" type="video/mp4">
+            your browser does not support the video tag.    
+            </video>
+
+            </section>
+     
+     <footer>
+   
+        <h1>Contact Us</h1>   
+              <h3 class="pos_right" id="para1">Lini's twitter:</h3> 
+        <a  href="https://twitter.com/FallOutBart"><img src="images/images5.jpg" alt="My twitter Logo">
      </footer>
+    <script>
+    const displayedImage = document.querySelector('.displayed-img');
+    let count = 1;
+
+    function nextImage(e) {
+        console.log('click');
+        displayedImage.setAttribute('src', 'images/image' + count + '.jpg');
+        console.log(count);
+        if(count < 5) {
+            count++;
+        }
+        else{
+            count = 1;
+        }
+
+    }
+
+    const fullImg = document.querySelector('.full-img');
+    fullImg.addEventListener('click', nextImage);
+
+    </script>
     </body>
 </html>
