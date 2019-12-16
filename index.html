@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Thought the Gate of Madness</title>
+        <meta charset="utf-10">
+        <meta name="description" content="Description of my web page.">
+        <style>
+            p.pos_fixed
+            {
+                position: fixed;
+                top:30px;
+                right:5px;
+            }
+            h3
+            {
+                text-align: center;
+                text-shadow: 5px 5px 5px #AAAAAA;
+                color:beige;
+                font-size: 20pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            h1
+            {
+                text-align: center;
+                text-shadow: 5px 5px 5px #AAAAAA;
+                color:lightyellow;
+                font-size: 12pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            body
+            {
+                background-image: url(images/image7.jpg);
+                background-repeat: repeat;
+                background-position: center;
+            }
+            .arrows {
+                position: relative;
+                width: 100vw;
+            }
+            .arrow {
+                font-size: 20px;
+                position: absolute;
+            }
+            .next {
+                right: 5%;
+            }
+            .prev {
+                left: 2%;
+            }
+        img {
+                display:table-cell;
+                vertical-align: middle;
+                border-radius: 8px;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>Though the Gate of Madness</h3>
+            <h1>Characters and Color Script</h1>
+       	    
+	    <div class="full-img">
+            <img class="displayed-img" src="images/image1.jpg">
+            <div class="overlay"></div>
+         </div>
+        </header>
+        <section>
+
+	    
+	    <h3>The story of Horror</h3>
+            <h1>produced by Lini and Junna</h1>
+	    <h1>It is a story about a detactive and a women</h1>
+	    <h1>But it also is a story about god and men...</h1>
+
+        <div class="arrows">
+            <div class="arrow next">></div>
+            <div class="arrow prev"><</div>
+        </div>
+        
+        <h3>Animatic</h3>
+        
+        <div class = "con">
+        <video width="1280"height="720"controls="controls">
+            <source src="images/video1.mp4" type="video/mp4">
+            your browser does not support the video tag.    
+            </video>
+        </div>
+
+        </section>
+     
+     <footer>
+   
+        <h1>Contact Us</h1>   
+              <h3 class="pos_right" id="para1">Lini's twitter:</h3> 
+        <a  href="https://twitter.com/FallOutBart"><img src="images/image8.jpg" alt="My twitter Logo">
+     </footer>
+    <script>
+    const displayedImage = document.querySelector('.displayed-img');
+    let count = 1;
+    function nextImage(e) {
+        console.log('click');
+        displayedImage.setAttribute('src', 'images/image' + count + '.jpg');
+        console.log(count);
+        if(count < 6) {
+            count++;
+        }
+        else{
+            count = 1;
+        }
+    }
+    const fullImg = document.querySelector('.full-img');
+    fullImg.addEventListener('click', nextImage);
+    </script>
+    </body>
+</html>
